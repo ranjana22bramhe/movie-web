@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheFilmCove</title>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/436/228/997/movies-mad-max-the-dark-knight-interstellar-movie-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeIn 2s ease-in-out;
+    min-height: 100vh;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.background {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    animation: slideInBackground 2s ease-out;
+}
+
+@keyframes slideInBackground {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff9800;
+    animation: slideInLeft 2s ease;
+    padding: 10px;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sign-in {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    animation: bounceInRight 2s ease;
+}
+
+@keyframes bounceInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.content {
+    text-align: center;
+    margin: auto;
+    padding: 0 20px;
+    animation: fadeInContent 2s ease-in-out;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 3rem; /* Adjusted for responsiveness */
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: fadeInTitle 1.5s ease;
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    animation: fadeInText 2s ease;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.email-form {
+    margin-top: 20px;
+    animation: fadeInForm 2.5s ease;
+}
+
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.email-form input {
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 400px;
+}
+
+.email-form .get-started {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+a{
+    color:black;
+    font-weight: bold;
+}
+
+.get-started:hover {
+    background-color: #e68900;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .logo {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .background {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .sign-in {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .email-form input {
+        width: 80%;
+    }
+
+    .email-form .get-started {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .sign-in {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .email-form input {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .email-form .get-started {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+footer {
+            background-color: #171717;
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+            width: 100%;
+            height: 150px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #f4f4f4;
+        }
+
+        .footer-section p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .footer-section .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-section .social-icons a img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s;
+        }
+
+        .footer-section .social-icons a img:hover {
+            transform: scale(1.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 10px;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+            }
+        }
+
+.explore-button {
+background-color: #ff9800; /* Button background color */
+color: #fff; /* Button text color */
+border: none; /* Remove default border */
+padding: 15px 30px; /* Padding inside the button */
+border-radius: 50px; /* Rounded corners */
+cursor: pointer; /* Pointer cursor on hover */
+font-size: 1.2rem; /* Font size */
+font-weight: bold; /* Bold text */
+transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+margin-top: 20px; /* Space above the button */
+display: inline-block; /* Align button next to other inline elements */
+text-decoration: none; /* Remove underline from links */
+}
+
+.explore-button:hover {
+background-color: #e68900; /* Darker color on hover */
+transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.explore-button:focus {
+outline: none; /* Remove default focus outline */
+box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.5); /* Add custom focus ring */
+}
+
+@media (max-width: 768px) {
+.explore-button {
+font-size: 1rem; /* Adjust font size for smaller screens */
+padding: 12px 24px; /* Adjust padding for smaller screens */
+}
+}
+
+@media (max-width: 480px) {
+.explore-button {
+font-size: 0.9rem; /* Further adjust font size */
+padding: 10px 20px; /* Further adjust padding */
+}
+}
+
+.carousel-container {
+position: relative;
+width: 100%;
+max-width: 800px;
+
+
+.prev {
+left: 10px;
+}
+
+.next {
+right: 10px;
+}
+
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.image-container img{
+    width: 100%; 
+    object-fit: cover;
+    border-radius: 10px; 
+}
+}
+    </style>
+
+
+</head>
+<body>
+    <div class="background">
+        <header>
+            <div class="logo">TheFilmCove.</div>
+            <!-- <button class="sign-in"><a href="sing.html">Sign In</a></button> -->
+        </header>
+        <div class="content">
+            <h1> <span class="color">Unlimited movies,</span> TV shows and more</h1>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <button class="explore-button"><a href="index2.html">Explore</a></button>
+            
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>TheFilmCove is your go-to destination for the latest movie news, reviews, and trailers. We bring you the best cinematic experiences and keep you updated with all the latest happenings in the film industry.</p>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@nutridelights.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: 123 Healthy Way, Wellness City, 45678</p>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Pinterest"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>
